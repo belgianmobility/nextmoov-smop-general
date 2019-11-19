@@ -21,6 +21,8 @@ You can get all the modules by usuing : `git submodule update --init`.
 
 ## Launching the modules
 
+You can use each module independently, just pick what you need in the `docker-compose.yml` file.
+
 To start the system, you need : 
 
 * To provide a OSM PBF file (See hereafter Data sources) in the directory `data` alongside the docker-compose.yml file.
