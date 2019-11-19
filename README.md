@@ -25,9 +25,9 @@ You can use each module independently, just pick what you need in the `docker-co
 
 To start the system, you need : 
 
-* To provide a OSM PBF file (See hereafter Data sources) in the directory `data` alongside the docker-compose.yml file.
+* To provide a OSM PBF file (See [Data sources](#data-sources)) in the directory `data` alongside the docker-compose.yml file.
 
-* To provide static GTFS zip files (See hereafter Data sources) in the directory `data` alongside the docker-compose.yml file.
+* To provide static GTFS zip files (See [Data sources](#data-sources)) in the directory `data` alongside the docker-compose.yml file.
 
 * The provided static GTFS files needs to be named `xxx-gtfs.zip` (where xxx is only composed of lower case letters).
 
