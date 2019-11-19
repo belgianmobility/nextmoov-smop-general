@@ -23,6 +23,14 @@ SMOP is composed of multiple services:
 
 The map data proposed are here : [Geofabriek - Download Belgium](http://download.geofabrik.de/europe/belgium.html)
 
-### GTFS Data
+### GTFS static
 
 The consolidated GTFS file may be provided by [iRail - GTFS](https://gtfs.irail.be/)
+
+### GTFS RT
+
+To have access to the GTFS RT feeds from the providers you can subscribe to thier services :
+
+* [DeLijn](https://data.delijn.be/docs/services/)
+* [SNCB / NMBS](https://www.belgiantrain.be/en/3rd-party-services/mobility-service-providers/public-data)
+* [STIB / MIVB](https://opendata.stib-mivb.be/)
