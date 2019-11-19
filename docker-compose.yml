@@ -1,0 +1,141 @@
+version: '3.3'
+services:
+  # ----- reverse-proxy --------------------------------------------------------
+  traefik:
+    image: "traefik:2.0"
+    command:
+      #- "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "8080:80"
+      - "9080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+
+  # ----- otp ------------------------------------------------------------------
+  otp-builder:
+    build: ./nextmoov-smop-otp/builder
+    volumes:
+      - ./data:/data
+
+  otp:
+    build: ./nextmoov-smop-otp/otp
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./data:/data
+    labels:
+      - "traefik.enable=true"
+      - "traefik.port=8080"
+      - "traefik.http.routers.otp-api.entrypoints=web"
+      - "traefik.http.routers.otp-api.rule=PathPrefix(`/otp`)"
+      
+  # ----- autocomplete-transit -------------------------------------------------
+  autocomplete-transit-elastic:
+    image: elasticsearch:6.4.3
+    environment:
+      - discovery.type=single-node
+    #ports:
+      #- "9200:9200"
+    volumes:
+      - autocomplete-transit-elastic:/usr/share/elasticsearch/data
+
+  autocomplete-transit-importer:
+    build: ./nextmoov-smop-autocomplete-transit/importer
+    depends_on:
+      - autocomplete-transit-elastic
+    volumes:
+      - ./data:/app/tmp
+
+  autocomplete-transit-api:
+    build: ./nextmoov-smop-autocomplete-transit/api
+    depends_on:
+      - autocomplete-transit-elastic
+    labels:
+      - "traefik.enable=true"
+      - "traefik.port=8080"
+      - "traefik.http.routers.autocomplete-transit-api.entrypoints=web"
+      - "traefik.http.routers.autocomplete-transit-api.rule=PathPrefix(`/autocomplete/station`)"
+    #ports:
+      #- "8082:80"
+
+  # ----- maps -----------------------------------------------------------------
+  maps-postgis:
+    build: ./nextmoov-smop-maps/postgis
+    #ports:
+      #- "5432:5432"
+    volumes:
+      - maps-postgis:/var/lib/postgresql/data
+
+  maps-server:
+    build: ./nextmoov-smop-maps/server
+    depends_on:
+      - maps-postgis
+    volumes:
+      - maps-server:/app/cache
+    labels:
+      - "traefik.enable=true"
+      - "traefik.port=8080"
+      - "traefik.http.routers.maps-server.entrypoints=web"
+      - "traefik.http.routers.maps-server.rule=PathPrefix(`/tiles`)"
+    #ports:
+      #- "8083:80"
+
+  maps-importer:
+    build: ./nextmoov-smop-maps/importer
+    depends_on:
+      - maps-postgis
+    volumes:
+      - maps-importer:/app/tmp
+      
+  # ----- autocomplete addr ----------------------------------------------------
+  autocomplete-addr-postgis:
+    build: ./nextmoov-smop-autocomplete-addr/postgis
+    volumes:
+      - autocomplete-addr-postgis:/var/lib/postgresql/data
+    #ports:
+      #- "5432:5432"
+
+  autocomplete-addr-elastic:
+    image: elasticsearch:6.4.3
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - autocomplete-addr-elastic:/usr/share/elasticsearch/data
+    #ports:
+      #- "9200:9200"
+
+  autocomplete-addr-importer:
+    build: ./nextmoov-smop-autocomplete-addr/importer
+    depends_on:
+      - autocomplete-addr-postgis
+      - autocomplete-addr-elastic
+    volumes:
+      - autocomplete-addr-importer:/app/tmp
+
+  autocomplete-addr-api:
+    build: ./nextmoov-smop-autocomplete-addr/api
+    depends_on:
+      - autocomplete-addr-importer
+      - autocomplete-addr-postgis
+      - autocomplete-addr-elastic
+    labels:
+      - "traefik.enable=true"
+      - "traefik.port=8080"
+      - "traefik.http.routers.autocomplete-addr-api.entrypoints=web"
+      - "traefik.http.routers.autocomplete-addr-api.rule=PathPrefix(`/autocomplete/address`)"
+    #ports:
+      #- "8084:80"
+
+volumes:
+  autocomplete-transit-elastic:
+  autocomplete-addr-postgis:
+  autocomplete-addr-elastic:
+  autocomplete-addr-importer:
+  maps-importer:
+  maps-postgis:
+  maps-server:
+  
