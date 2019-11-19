@@ -25,4 +25,4 @@ The map data proposed are here : [Geofabriek - Download Belgium](http://download
 
 ### GTFS Data
 
-The consolidated GTFS file may be provided by (iRail - GTFS)[https://gtfs.irail.be/]
+The consolidated GTFS file may be provided by [iRail - GTFS](https://gtfs.irail.be/)
