@@ -1,0 +1,12 @@
+[submodule "nextmoov-smop-maps"]
+	path = nextmoov-smop-maps
+	url = git@github.com:nextmoov/nextmoov-smop-maps.git
+[submodule "nextmoov-smop-autocomplete-addr"]
+	path = nextmoov-smop-autocomplete-addr
+	url = git@github.com:nextmoov/nextmoov-smop-autocomplete-addr.git
+[submodule "nextmoov-smop-autocomplete-transit"]
+	path = nextmoov-smop-autocomplete-transit
+	url = git@github.com:nextmoov/nextmoov-smop-autocomplete-transit.git
+[submodule "nextmoov-smop-otp"]
+	path = nextmoov-smop-otp
+	url = git@github.com:nextmoov/nextmoov-smop-otp.git
