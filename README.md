@@ -19,11 +19,13 @@ SMOP is composed of multiple services:
 
 You can get all the modules by usuing : `git submodule update --init`.
 
-## Launching the modules
+## Starting things
 
 You can use each module independently, just pick what you need in the `docker-compose.yml` file.
 
-To start the system, you need : 
+### With OTP
+
+To have a system operational with OTP, you need to:
 
 * To provide a OSM PBF file (See [Data sources](#data-sources)) in the directory `data` alongside the docker-compose.yml file.
 
@@ -37,6 +39,12 @@ Example of last line of the build, when it succeeds :
 ```
 13:49:26.629 INFO (GraphBuilder.java:153) Graph building took 15.1 minutes.
 ```
+
+Then see [Without OTP](#without-otp).
+
+### Without OTP
+
+To start the system, you need to : 
 
 * Start everything : `docker-compose up`
 
