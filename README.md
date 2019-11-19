@@ -42,6 +42,8 @@ Example of last line of the build, when it succeeds :
 
 Except for OTP (http://localhost:8081), all services will be accessible trough the reverce-proxy [Traefik 2](https://traefik.io/) on http://localhost:8080.
 
+See each services for more information about their API.
+
 ## Data sources
 
 ### Maps
