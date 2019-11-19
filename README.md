@@ -10,14 +10,28 @@ The route planning engine is OTP.
 
 ## Architecture
 
-You can get all the modules by usuing : `git submodule update --init`.
-
 SMOP is composed of multiple services:
 
 * Maps : [nextmoov-smop-maps](https://github.com/nextmoov/nextmoov-smop-maps)
 * Autocomplete addresses : [nextmoov-smop-autocomplete-addr](https://github.com/nextmoov/nextmoov-smop-autocomplete-addr)
 * Autocomplete transit : [nextmoov-smop-autocomplete-transit](https://github.com/nextmoov/nextmoov-smop-autocomplete-transit)
 * OTP : [nextmoov-smop-otp](https://github.com/nextmoov/nextmoov-smop-otp)
+
+You can get all the modules by usuing : `git submodule update --init`.
+
+## Launch the system
+
+To start the system, you need : 
+
+* To provide a OSM PBF file (See hereafter Data sources) in the directory `data` alongside the docker-compose.yml file.
+
+* To provide static GTFS zip files (See hereafter Data sources) in the directory `data` alongside the docker-compose.yml file.
+
+* The provided files needs to be named `xxx-gtfs.zip` (where xxx is only composed of lower case letters).
+
+* Build OTP : `docker-compose run otp-builder ./build`
+
+* Start everything : `docker-compose up`
 
 ## Data sources
 
