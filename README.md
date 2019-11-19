@@ -31,6 +31,11 @@ To start the system, you need :
 
 * Build OTP : `docker-compose run otp-builder ./build`
 
+Example of last line of the build, when it succeeds :
+```
+13:49:26.629 INFO (GraphBuilder.java:153) Graph building took 15.1 minutes.
+```
+
 * Start everything : `docker-compose up`
 
 ## Data sources
