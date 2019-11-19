@@ -29,7 +29,7 @@ To start the system, you need :
 
 * To provide static GTFS zip files (See hereafter Data sources) in the directory `data` alongside the docker-compose.yml file.
 
-* The provided files needs to be named `xxx-gtfs.zip` (where xxx is only composed of lower case letters).
+* The provided static GTFS files needs to be named `xxx-gtfs.zip` (where xxx is only composed of lower case letters).
 
 * Build OTP : `docker-compose run otp-builder ./build`
 
