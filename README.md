@@ -31,7 +31,7 @@ To start the system, you need :
 
 * The provided static GTFS files needs to be named `xxx-gtfs.zip` (where xxx is only composed of lower case letters).
 
-* Build OTP : `docker-compose run otp-builder ./build`
+* Build OTP (it takes 15 minutes... on my machine) : `docker-compose run otp-builder ./build`
 
 Example of last line of the build, when it succeeds :
 ```
