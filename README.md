@@ -19,28 +19,40 @@ SMOP is composed of multiple services:
 
 You can get all the modules by usuing : `git submodule update --init`.
 
-## Launching the modules
+## Starting things
 
-To start the system, you need : 
+You can use each module independently, just pick what you need in the `docker-compose.yml` file.
 
-* To provide a OSM PBF file (See hereafter Data sources) in the directory `data` alongside the docker-compose.yml file.
+### With OTP
 
-* To provide static GTFS zip files (See hereafter Data sources) in the directory `data` alongside the docker-compose.yml file.
+To have a system operational with OTP, you need to:
 
-* The provided files needs to be named `xxx-gtfs.zip` (where xxx is only composed of lower case letters).
+* To provide a OSM PBF file (See [Data sources](#data-sources)) in the directory `data` alongside the docker-compose.yml file.
 
-* Build OTP : `docker-compose run otp-builder ./build`
+* To provide static GTFS zip files (See [Data sources](#data-sources)) in the directory `data` alongside the docker-compose.yml file.
+
+* The provided static GTFS files needs to be named `xxx-gtfs.zip` (where xxx is only composed of lower case letters).
+
+* Build OTP (it takes 15 minutes... on my machine) : `docker-compose run otp-builder ./build`
 
 Example of last line of the build, when it succeeds :
 ```
 13:49:26.629 INFO (GraphBuilder.java:153) Graph building took 15.1 minutes.
 ```
 
+Then see [Without OTP](#without-otp).
+
+### Without OTP
+
+To start the system, you need to : 
+
 * Start everything : `docker-compose up`
 
 ## Using the services
 
-Except for OTP (http://localhost:8081), all services will be accessible trough the reverce-proxy [Traefik 2](https://traefik.io/) on http://localhost:8080.
+All services will be accessible trough the reverce-proxy [Traefik 2](https://traefik.io/) on http://localhost:8080.
+
+Only the OTP web interface is located at http://localhost:8081. 
 
 See each services for more information about their API.
 
