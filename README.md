@@ -19,7 +19,7 @@ SMOP is composed of multiple services:
 
 You can get all the modules by usuing : `git submodule update --init`.
 
-## Launch the system
+## Launching the modules
 
 To start the system, you need : 
 
