@@ -10,6 +10,8 @@ The route planning engine is OTP.
 
 ## Architecture
 
+You can get all the modules by usuing : `git submodule update --init`.
+
 SMOP is composed of multiple services:
 
 * Maps : [nextmoov-smop-maps](https://github.com/nextmoov/nextmoov-smop-maps)
