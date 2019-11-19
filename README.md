@@ -34,3 +34,4 @@ To have access to the GTFS RT feeds from the providers you can subscribe to thie
 * [DeLijn](https://data.delijn.be/docs/services/)
 * [SNCB / NMBS](https://www.belgiantrain.be/en/3rd-party-services/mobility-service-providers/public-data)
 * [STIB / MIVB](https://opendata.stib-mivb.be/)
+* TEC is currently working on feed accessible to everyone
