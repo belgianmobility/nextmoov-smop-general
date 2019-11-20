@@ -25,7 +25,7 @@ You can get all the modules by usuing : `git submodule update --init`.
 
 You can use each module independently, just pick what you need in the `docker-compose.yml` file.
 
-### With OTP
+### With OTP (aka With Route Planning)
 
 To have a system operational with OTP, you need to:
 
@@ -44,7 +44,7 @@ Example of last line of the build, when it succeeds :
 
 Then see [Without OTP](#without-otp).
 
-### Without OTP
+### Without OTP (aka Without Route Planning)
 
 To start the system, you need to : 
 
