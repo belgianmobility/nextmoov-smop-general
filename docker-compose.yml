@@ -73,6 +73,7 @@ services:
   maps-server:
     build: ./nextmoov-smop-maps/server
     depends_on:
+      - maps-importer
       - maps-postgis
     volumes:
       - maps-server:/app/cache
