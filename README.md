@@ -10,6 +10,8 @@ The route planning engine is OTP.
 
 ## Architecture
 
+![Software Architecture](./doc/SoftwareArchitecture.png)
+
 SMOP is composed of multiple services:
 
 * Maps : [nextmoov-smop-maps](https://github.com/nextmoov/nextmoov-smop-maps)
