@@ -1,12 +1,14 @@
-# SMOP
-
+# Smart Mobility Planner
 
 ## General information
 
-SMOP stands for Smart MObility Planner.
+The **S**mart **MO**bility **P**lanner (*a.k.a* SMOP) is a **real-time, intermodal route planning solution** developed by the four belgian Public Transport Operators (PTOs), namely the [TEC](https://www.infotec.be/), [De Lijn](https://www.delijn.be/en/), [STIB-MIVB](https://www.stib-mivb.be/index.htm?l=en) and [SNCB-NMBS](https://www.belgiantrain.be/fr) together with [nextmoov](https://github.com/nextmoov/nextmoov) as technical partner.
 
-The route planning engine is OTP.
+One key objective of the SMOP was to build **a robust route planning solution (both in terms of functional scope and performance) that is backed-up solely by open-source technologies and data**. The selected route planning engine is [Open Trip Planner](https://www.opentripplanner.org/).
 
+The SMOP pilot project was a winner of the [Smart Mobility Belgium](https://www.smartmobility-belgium.be/) call for ideas.
+
+A comprehensive description of the project can be found [here](https://drive.google.com/file/d/1icQhfvu54ST9hkw7Xl02xk1zy3xnKsAZ/view?usp=sharing).
 
 ## Architecture
 
