@@ -42,7 +42,7 @@ Example of last line of the build, when it succeeds :
 13:49:26.629 INFO (GraphBuilder.java:153) Graph building took 15.1 minutes.
 ```
 
-Then see [Without OTP](#without-otp).
+Then see [Without OTP](#without-otp-aka-without-route-planning).
 
 ### Without OTP (aka Without Route Planning)
 
