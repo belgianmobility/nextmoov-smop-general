@@ -70,9 +70,13 @@ The consolidated GTFS file may be provided by [iRail - GTFS](https://gtfs.irail.
 
 ### GTFS RT
 
-To have access to the GTFS RT feeds from the providers you can subscribe to thier services :
+To have access to the GTFS RT feeds from the public transport operators (PTOs) you need to subscribe to their services :
 
 * [DeLijn](https://data.delijn.be/docs/services/)
 * [SNCB / NMBS](https://www.belgiantrain.be/en/3rd-party-services/mobility-service-providers/public-data)
 * [STIB / MIVB](https://opendata.stib-mivb.be/)
 * TEC is currently working on feed accessible to everyone
+
+### Villo
+
+JCDecaux provides an open API to get bikes availability, you can subscribe [here](https://developer.jcdecaux.com/#/opendata/vls?page=getstarted) to create an account.
