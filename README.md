@@ -29,7 +29,14 @@ In each submodules you can find a `config.js` file where you can set the connect
 
 ## Starting things
 
-You can use each module independently, just pick what you need in the `docker-compose.yml` file.
+You can use each module independently, just pick what you need in the `docker-compose.yml` file. Everything was tested with :
+
+```
+$ docker-compose -v
+docker-compose version 1.21.0, build unknown
+$ docker -v
+Docker version 19.03.5, build 633a0ea838
+```
 
 ### With OTP (aka With Route Planning)
 
