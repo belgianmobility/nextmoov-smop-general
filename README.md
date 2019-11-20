@@ -23,6 +23,8 @@ SMOP is composed of multiple services:
 
 You can get all the modules by usuing : `git submodule update --init`.
 
+In each submodules you can find a `config.js` file where you can set the connection strings, by example. Take care to rebuild your Docker images if you change de configuration.
+
 ## Starting things
 
 You can use each module independently, just pick what you need in the `docker-compose.yml` file.
