@@ -77,7 +77,7 @@ To have access to the GTFS RT feeds from the public transport operators (PTOs) y
 * [STIB / MIVB](https://opendata.stib-mivb.be/)
 * TEC is currently working on feed accessible to everyone
 
-### Villo
+### Villo!
 
 JCDecaux provides an open API to get bikes availability, you can subscribe [here](https://developer.jcdecaux.com/#/opendata/vls?page=getstarted) to create an account.
 
