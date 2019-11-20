@@ -48,7 +48,7 @@ To have a system operational with OTP, you need to:
 
 * The provided static GTFS files needs to be named `xxx-gtfs.zip` (where xxx is only composed of lower case letters).
 
-* Build OTP (it takes 15 minutes... on my machine) : `docker-compose run otp-builder ./build`
+* Build OTP (taking around 15 mins) : `docker-compose run otp-builder ./build`
 
 Example of last line of the build, when it succeeds :
 ```
@@ -65,7 +65,7 @@ To start the system, you need to :
 
 ## Using the services
 
-All services will be accessible trough the reverce-proxy [Traefik 2](https://traefik.io/) on http://localhost:8080.
+All services will be accessible trough the reverse-proxy [Traefik 2](https://traefik.io/) on http://localhost:8080.
 
 Only the OTP web interface is located at http://localhost:8081. 
 
