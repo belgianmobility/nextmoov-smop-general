@@ -21,6 +21,8 @@ SMOP is composed of multiple services:
 * Autocomplete transit : [nextmoov-smop-autocomplete-transit](https://github.com/nextmoov/nextmoov-smop-autocomplete-transit)
 * OTP : [nextmoov-smop-otp](https://github.com/nextmoov/nextmoov-smop-otp)
 
+And a demonstration frontend : [nextmoov-smop-frontend](https://github.com/nextmoov/nextmoov-smop-frontend)
+
 You can get all the modules by usuing : `git submodule update --init`.
 
 In each submodules you can find a `config.js` file where you can set the connection strings, by example. Take care to rebuild your Docker images if you change de configuration.
