@@ -80,3 +80,8 @@ To have access to the GTFS RT feeds from the public transport operators (PTOs) y
 ### Villo
 
 JCDecaux provides an open API to get bikes availability, you can subscribe [here](https://developer.jcdecaux.com/#/opendata/vls?page=getstarted) to create an account.
+
+"contracts" are the key related to a specific location:
+
+* For Brussels : `contract=Bruxelles-Capitale`
+* For Namur : `contract=Namur`
