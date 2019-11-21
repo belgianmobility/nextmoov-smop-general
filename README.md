@@ -1,3 +1,5 @@
+![SMOP header](./doc/smb-pto-repo-opensource-header.png)
+
 # Smart Mobility Planner
 
 ## General information
