@@ -42,6 +42,8 @@ Docker version 19.03.5, build 633a0ea838
 
 ### With OTP (aka With Route Planning)
 
+WARNING: By default, on MAC/Windows Docker Desktop is restricted to not use too much RAM. OTP needs at peak 8GB of RAM/SWAP to run.
+
 To have a system operational with OTP, you need to:
 
 * To provide a OSM PBF file (See [Data sources](#data-sources)) in the directory `data` alongside the docker-compose.yml file.
