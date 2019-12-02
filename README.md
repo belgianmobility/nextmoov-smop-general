@@ -75,7 +75,7 @@ See each services for more information about their API.
 
 ## Data sources
 
-### Maps
+### Maps (aka OSM PBF)
 
 The map data proposed are here : [Geofabriek - Download Belgium](http://download.geofabrik.de/europe/belgium.html)
 
