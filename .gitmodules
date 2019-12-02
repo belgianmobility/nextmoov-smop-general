@@ -10,6 +10,3 @@
 [submodule "nextmoov-smop-otp"]
 	path = nextmoov-smop-otp
 	url = git@github.com:nextmoov/nextmoov-smop-otp.git
-[submodule "nextmoov-smop-frontend"]
-	path = nextmoov-smop-frontend
-	url = git@github.com:nextmoov/nextmoov-smop-frontend.git
