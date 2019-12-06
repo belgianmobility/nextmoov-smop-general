@@ -33,7 +33,7 @@ In each submodules you can find a `config.js` file where you can set the connect
 
 You can use each module independently, just pick what you need in the `docker-compose.yml` file. Everything was tested with :
 
-```
+```console
 $ docker-compose -v
 docker-compose version 1.21.0, build unknown
 $ docker -v
@@ -55,7 +55,7 @@ To have a system operational with OTP, you need to:
 * Build OTP (taking around 15 mins) : `docker-compose run otp-builder ./build`
 
 Example of last line of the build, when it succeeds :
-```
+```console
 13:49:26.629 INFO (GraphBuilder.java:153) Graph building took 15.1 minutes.
 ```
 
