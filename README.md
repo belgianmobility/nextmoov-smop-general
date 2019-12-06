@@ -51,11 +51,10 @@ WARNING: By default, on MAC/Windows Docker Desktop is restricted to not use too 
 
 To have a system operational with OTP, you need to:
 
-* To provide a OSM PBF file (See [Data sources](#data-sources)) in the directory `data` alongside the docker-compose.yml file.
-
-* To provide static GTFS zip files (See [Data sources](#data-sources)) in the directory `data` alongside the docker-compose.yml file.
-
-* The provided static GTFS files needs to be named `xxx-gtfs.zip` (where xxx is only composed of lower case letters).
+* To provide the data  
+  - a OSM PBF file (See [Data sources](#data-sources)) in the directory `data` alongside the docker-compose.yml file.
+  - static GTFS zip files (See [Data sources](#data-sources)) in the directory `data` alongside the docker-compose.yml file.  
+  The provided static GTFS files needs to be named `xxx-gtfs.zip` (where xxx is only composed of lower case letters - what you put in place of `xxx` doesn't matter as long as it follow the template. The otp-builder will look through the folder for file named according to said template).
 
 * Build OTP (taking around 15 mins) : `docker-compose run otp-builder ./build`
 
