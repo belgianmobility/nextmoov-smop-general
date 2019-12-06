@@ -31,7 +31,12 @@ In each submodules you can find a `config.js` file where you can set the connect
 
 ## Starting things
 
-You can use each module independently, just pick what you need in the `docker-compose.yml` file. Everything was tested with :
+You can start the entire system or use each module independently or a mix of both, depending on your needs.  
+You can customize the root `docker-compose.yml` file (commenting out what do not need) or run each module independently (they each have a their own docker-compose.yml file in their root folder).  
+
+Note: you always need the reverse proxy for exposing endpoints
+
+Everything was tested with :
 
 ```
 $ docker-compose -v
