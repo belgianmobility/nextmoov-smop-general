@@ -14,7 +14,7 @@ A comprehensive description of the project can be found [here](https://drive.goo
 
 ## Architecture
 
-![Software Architecture](./doc/SoftwareArchitecture.png)
+![Software Architecture - SMOP General](https://user-images.githubusercontent.com/10850995/70332660-60d98e00-1842-11ea-9d98-58dacbf3096b.jpg)
 
 SMOP is composed of multiple services:
 
