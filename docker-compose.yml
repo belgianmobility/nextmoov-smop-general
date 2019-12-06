@@ -48,7 +48,7 @@ services:
     depends_on:
       - autocomplete-transit-elastic
     volumes:
-      - ./data:/app/tmp
+      - ./data:/app/data
 
   autocomplete-transit-api:
     build: ./nextmoov-smop-autocomplete-transit/api
