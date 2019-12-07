@@ -34,7 +34,7 @@ In each submodules you can find a `config.js` file where you can set the connect
 ## Starting things
 
 You can start the entire system or use each module independently or a mix of both, depending on your needs
-You can customize the root `docker-compose.yml` file (commenting out what do not need) or run each module independently (they each have a their own docker-compose.yml file in their root folder – see [Modules](https://github.com/nextmoov/nextmoov-smop-general#modules).    
+You can customize the root `docker-compose.yml` file (commenting out what do not need) or run each module independently (they each have a their own docker-compose.yml file in their root folder – see [Modules](#modules).    
 
 Note: you always need the reverse proxy for exposing endpoints
 
@@ -42,8 +42,8 @@ Note: you always need the reverse proxy for exposing endpoints
 ### Requirements
   - docker
   - docker-compose
-  - [provide data source (see [With OTP](https://github.com/nextmoov/nextmoov-smop-general#With-OTP))]
-  - [Build OTP beforehand (see [With OTP](https://github.com/nextmoov/nextmoov-smop-general#With-OTP))]
+  - [provide data source (see [With OTP](#with-otp))]
+  - [Build OTP beforehand (see [With OTP](#with-otp))]
 
 
 ### Starting the services
@@ -51,7 +51,7 @@ Note: you always need the reverse proxy for exposing endpoints
    `git clone git@github.com:nextmoov/nextmoov-smop-general.git`
 - move into the created folder  
    `cd nextmoov-smop-general`
-- provide required source data if needed (see [With OTP](https://github.com/nextmoov/nextmoov-smop-general#With-OTP))
+- provide required source data if needed (see [With OTP](#with-otp))
 - run via docker-compose  
    `docker-compose up`
 
@@ -84,9 +84,11 @@ Example of last line of the build, when it succeeds :
 13:49:26.629 INFO (GraphBuilder.java:153) Graph building took 15.1 minutes.
 ```
 
-Then see [Without OTP](#without-otp-aka-without-route-planning).
+Then see [Without OTP](#without-otp).
 
-### Without OTP (aka Without Route Planning)
+### Without OTP 
+
+aka Without Route Planning
 
 To start the system, you need to : 
 
