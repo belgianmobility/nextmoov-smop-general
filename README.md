@@ -16,6 +16,7 @@ A comprehensive description of the project can be found [here](https://drive.goo
 
 ![Software Architecture](./doc/SoftwareArchitecture.png)
 
+## Modules
 SMOP is composed of multiple services:
 
 * Maps : [nextmoov-smop-maps](https://github.com/nextmoov/nextmoov-smop-maps)
@@ -29,12 +30,30 @@ You can get all the modules by using : `git submodule update --init`.
 
 In each submodules you can find a `config.js` file where you can set the connection strings, by example. Take care to rebuild your Docker images if you change de configuration.
 
+
 ## Starting things
 
-You can start the entire system or use each module independently or a mix of both, depending on your needs.  
-You can customize the root `docker-compose.yml` file (commenting out what do not need) or run each module independently (they each have a their own docker-compose.yml file in their root folder).  
+You can start the entire system or use each module independently or a mix of both, depending on your needs
+You can customize the root `docker-compose.yml` file (commenting out what do not need) or run each module independently (they each have a their own docker-compose.yml file in their root folder – see [Modules](#modules).    
 
 Note: you always need the reverse proxy for exposing endpoints
+
+
+### Requirements
+  - docker
+  - docker-compose
+  - [provide data source (see [With OTP](#with-otp))]
+  - [Build OTP beforehand (see [With OTP](#with-otp))]
+
+
+### Starting the services
+- clone the repo    
+   `git clone git@github.com:nextmoov/nextmoov-smop-general.git`
+- move into the created folder  
+   `cd nextmoov-smop-general`
+- provide required source data if needed (see [With OTP](#with-otp))
+- run via docker-compose  
+   `docker-compose up`
 
 Everything was tested with :
 
@@ -45,14 +64,16 @@ $ docker -v
 Docker version 19.03.5, build 633a0ea838
 ```
 
-### With OTP (aka With Route Planning)
+### With OTP 
+
+aka With Route Planning
 
 WARNING: By default, on MAC/Windows Docker Desktop is restricted to not use too much RAM. OTP needs at peak 8GB of RAM/SWAP to run.
 
 To have a system operational with OTP, you need to:
 
 * To provide the data  
-  - a OSM PBF file (See [Data sources](#data-sources)) in the directory `data` alongside the docker-compose.yml file.
+  - an OSM PBF file (See [Data sources](#data-sources)) in the directory `data` alongside the docker-compose.yml file.
   - static GTFS zip files (See [Data sources](#data-sources)) in the directory `data` alongside the docker-compose.yml file.  
   The provided static GTFS files needs to be named `xxx-gtfs.zip` (where xxx is only composed of lower case letters - what you put in place of `xxx` doesn't matter as long as it follow the template. The otp-builder will look through the folder for file named according to said template).
 
@@ -63,9 +84,11 @@ Example of last line of the build, when it succeeds :
 13:49:26.629 INFO (GraphBuilder.java:153) Graph building took 15.1 minutes.
 ```
 
-Then see [Without OTP](#without-otp-aka-without-route-planning).
+Then see [Without OTP](#without-otp).
 
-### Without OTP (aka Without Route Planning)
+### Without OTP 
+
+aka Without Route Planning
 
 To start the system, you need to : 
 
