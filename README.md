@@ -52,6 +52,8 @@ Note: you always need the reverse proxy for exposing endpoints
 - move into the created folder  
    `cd nextmoov-smop-general`
 - provide required source data if needed (see [With OTP](#with-otp))
+- build the database (see [with otp](https://github.com/nextmoov/nextmoov-smop-general/#with-otp) - takes 15 to 20 min)  
+   `docker-compose run otp-builder ./build`
 - run via docker-compose  
    `docker-compose up`
 
