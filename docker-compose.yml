@@ -32,7 +32,7 @@ services:
       - "traefik.port=8080"
       - "traefik.http.routers.otp-api.entrypoints=web"
       - "traefik.http.routers.otp-api.rule=PathPrefix(`/otp`)"
-      
+
   # ----- autocomplete-transit -------------------------------------------------
   autocomplete-transit-elastic:
     image: elasticsearch:6.4.3
@@ -81,7 +81,7 @@ services:
       - "traefik.enable=true"
       - "traefik.port=8080"
       - "traefik.http.routers.maps-server.entrypoints=web"
-      - "traefik.http.routers.maps-server.rule=PathPrefix(`/tiles`)"
+      - "traefik.http.routers.maps-server.rule=PathPrefix(`/tiles`) || PathPrefix(`/oceans.geojson`)"
     #ports:
       #- "8083:80"
 
@@ -91,7 +91,7 @@ services:
       - maps-postgis
     volumes:
       - maps-importer:/app/tmp
-      
+
   # ----- autocomplete addr ----------------------------------------------------
   autocomplete-addr-postgis:
     build: ./nextmoov-smop-autocomplete-addr/postgis
@@ -139,4 +139,4 @@ volumes:
   maps-importer:
   maps-postgis:
   maps-server:
-  
+
